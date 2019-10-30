@@ -1,5 +1,8 @@
 """
 A cloud function to forward Prisma Cloud webhook messages to syslog
+Written by
+Eddie Beuerlein
+Marc Hobson
 """
 #
 # main() will be run when you invoke this action
