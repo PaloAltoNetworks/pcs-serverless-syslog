@@ -17,7 +17,7 @@ import requests
 OUTPUT = "syslog"
 
 #Insert Syslog server info 
-SYSLOG_HOST = "34.69.181.79"
+SYSLOG_HOST = "XXX.XXX.XXX.XXX"
 SYSLOG_PORT = 514
 
 #Insert Webhook URL information 
