@@ -12,7 +12,7 @@ import socket
 import json
 import requests
 
-SYSLOG_HOST = "34.69.181.79"
+SYSLOG_HOST = "123.456.789.012"
 SYSLOG_PORT = 514
 DEST_WEBHOOK = "https://webhook.site/79a10feb-a432-475b-87c2-d85ce129a1d9"
 #Set to SYSLOG or WEBHOOK
