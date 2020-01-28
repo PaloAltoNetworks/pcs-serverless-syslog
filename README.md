@@ -47,11 +47,10 @@ Author: *Eddie Beuerlein and Marc Hobson*
 Add to top of file (needed to handle large JSON alert payload):
 ```
 $MaxMessageSize 64k
-Uncomment TCP section:
-Provides TCP syslog reception
+#need TCP enabled due to payload sizes of JSON data
 $ModLoad imtcp
 $InputTCPServerRun 514
-Modify local3.* to write to /var/log (this should match line 13 of appendix):
+#needs to match facility specified in python code
 local3.*     /var/log/RedLock.log  
 ```
 3. You may want to comment out the /etc/rsyslog.d/90-google.conf line as this can slow reception of the JSON messages or remove the file altogether.  NOTE this only affects GCP provided virtual machines. https://logrhythm.com/blog/troubleshooting-delayed-syslog-messages/
