@@ -4,18 +4,18 @@ Version: *1.0*
 Author: *Eddie Beuerlein and Marc Hobson*
 
 ### Use Cases
--Can’t use AWS SQS integration because environment is Azure/GCP only
--Need to support a SIEM or other data ingestion tool that we currently don’t have a built-in integration available (currently we support Splunk, Jira and ServiceNow)
--Useful for anything that can ingest JSON data from a syslog message
+- Can’t use AWS SQS integration because environment is Azure/GCP only
+- Need to support a SIEM or other data ingestion tool that we currently don’t have a built-in integration available (currently we support Splunk, Jira and ServiceNow)
+- Useful for anything that can ingest JSON data from a syslog message
 
 
 ### Requirements and Dependencies
--Syslog-NG, Rsyslog or equivalent - needs to support TCP delivery due to the size of the alert payload
--Serverless capability:
-  -GCP Cloud Functions
-  -AWS Lambda
-  -Azure Functions
--SIEM/or other data ingestion tool that supports JSON based data (this could be other formats if there is a way to convert to them such as CEF or LEEF)
+- Syslog-NG, Rsyslog or equivalent: needs to support TCP delivery due to the size of the alert payload
+- Serverless capability:
+     - GCP Cloud Functions
+     - AWS Lambda
+     - Azure Functions
+- SIEM/or other data ingestion tool that supports JSON based data (this could be other formats if there is a way to convert to them such as CEF or LEEF)
 
 
 ### Configuration
