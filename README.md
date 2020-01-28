@@ -45,6 +45,7 @@ Author: *Eddie Beuerlein and Marc Hobson*
 
 2. Configuring rsyslog.conf file:
 Add to top of file (needed to handle large JSON alert payload):
+```
 $MaxMessageSize 64k
 Uncomment TCP section:
 Provides TCP syslog reception
@@ -52,7 +53,7 @@ $ModLoad imtcp
 $InputTCPServerRun 514
 Modify local3.* to write to /var/log (this should match line 13 of appendix):
 local3.*     /var/log/RedLock.log  
-
+```
 3. You may want to comment out the /etc/rsyslog.d/90-google.conf line as this can slow reception of the JSON messages or remove the file altogether.  NOTE this only affects GCP provided virtual machines. https://logrhythm.com/blog/troubleshooting-delayed-syslog-messages/
 
 #### Prisma integration setup
