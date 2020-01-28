@@ -19,9 +19,9 @@ Author: *Eddie Beuerlein and Marc Hobson*
 
 
 ### Configuration
-####AWS Lambda Setup
+#### AWS Lambda Setup
 
-####GCP Cloud Function Setup
+#### GCP Cloud Function Setup
 
 1. Create Function
 
@@ -39,7 +39,7 @@ Author: *Eddie Beuerlein and Marc Hobson*
    - Select “Trigger” 
    - Copy the URL for use with the Prisma Cloud webhook integration.
 
-####VM machine / Syslog Server Setup
+#### VM machine / Syslog Server Setup
 
 1. Any Linux server will work for this setup, but the syslog server does need to support TCP in order to handle the large alert payload from Prisma.  Rsyslog or SyslogNG work great in this scenario.  Rsyslog will be used in the setup example.
 
@@ -55,7 +55,7 @@ local3.*     /var/log/RedLock.log
 
 3. You may want to comment out the /etc/rsyslog.d/90-google.conf line as this can slow reception of the JSON messages or remove the file altogether.  NOTE this only affects GCP provided virtual machines. https://logrhythm.com/blog/troubleshooting-delayed-syslog-messages/
 
-####Prisma integration setup
+#### Prisma integration setup
 1. https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin/configure-external-integrations-on-prisma-cloud/integrate-prisma-cloud-with-webhooks
 
 2. Insert Cloud Function trigger URL into the “Webhook URL” textbox
