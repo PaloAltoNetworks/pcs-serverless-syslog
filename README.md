@@ -23,9 +23,8 @@ Author: *Eddie Beuerlein and Marc Hobson*
 
 #### GCP Cloud Function Setup
 
-1. Create Function
-     Image: 
-     ![](./images/create_gcp_function.png)
+1. Create Function 
+   - ![](./images/create_gcp_function.png)
 2. Name function 
    - Set Memory allocated to 128mb
    - Set trigger to HTTP for use with a webhook.
