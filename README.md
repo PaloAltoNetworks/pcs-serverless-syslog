@@ -20,21 +20,35 @@ Author: *Eddie Beuerlein and Marc Hobson*
 
 ### Configuration
 #### AWS Lambda Setup
+- Create NEW Lambda Function
+     - Paste Code
+     - Save
+
+- Configure Amazon API Gateway
+     - Create NEW API Gateway
+     - Build “HTTP API”
+     - Click “Add Integration” Button
+       - Integration Type: “Lambda”
+       - Integration Target: your choice
+       - Select the above created Lambda Function from the text box
+       - Give the API a name
+       - Select “Review and Create”
+       - Copy the “Invoke URL” to use to test with curl or other source.
 
 #### GCP Cloud Function Setup
 
-1. Create Function 
+- Create Function 
      - ![](./images/create_gcp_function.png)
-2. Name function 
+- Name function 
    - Set Memory allocated to 128mb
    - Set trigger to HTTP for use with a webhook.
 
-3. Use Inline Editor 
+- Use Inline Editor 
    - Select “Python 3.7” 
    - Paste code here 
    - Configure function to Execute as “main”. Finish by clicking “Create”.
 
-4. To attain the URL of the cloud function:
+- To attain the URL of the cloud function:
    - First click on the function
    - Select “Trigger” 
    - Copy the URL for use with the Prisma Cloud webhook integration.
