@@ -1,3 +1,8 @@
+"""
+An AWS Lambda function to forward Prisma Cloud webhook messages to syslog
+"""
+
+
 import json
 import logging
 import sys
