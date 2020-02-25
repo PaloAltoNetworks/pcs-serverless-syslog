@@ -16,6 +16,7 @@ Author: *Eddie Beuerlein and Marc Hobson*
      - AWS Lambda
      - Azure Functions
 - SIEM/or other data ingestion tool that supports JSON based data (this could be other formats if there is a way to convert to them such as CEF or LEEF)
+- Choose memory profile that meets your needs: 128MB is not very much
 
 
 ### Configuration
