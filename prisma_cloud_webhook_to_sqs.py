@@ -14,7 +14,6 @@ def lambda_handler(event, context):
         
         for alert in range(len(request_json)):
             response = sqs_queue.send_message(MessageBody=json.dumps(request_json[alert]))
-    # TODO implement
     return {
         'statusCode': 200,
     }
