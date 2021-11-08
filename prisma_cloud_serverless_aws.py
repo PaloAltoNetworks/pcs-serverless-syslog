@@ -18,9 +18,7 @@ def lambda_handler(event, context):
     syslogger = logging.getLogger('MySysLogger')
     syslogger.setLevel(logging.INFO)
     handler = logging.handlers.SysLogHandler(address = (SYSLOG_HOST, SYSLOG_PORT),facility = logging.handlers.SysLogHandler.LOG_LOCAL3,socktype=socket.SOCK_STREAM)
-    #handler.setFormatter(logging.Formatter('%(message)s\n'))
-    #needed for Qradar
-    handler.setFormatter(logging.Formatter("%(asctime)s PRISMA_CLOUD %(message)s\n", "%b %d %H:%M:%S")) #added \n
+    handler.setFormatter(logging.Formatter('%(message)s\n'))
     handler.append_nul = False
     syslogger.addHandler(handler)    
     for alert in range(len(request_json)):
