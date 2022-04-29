@@ -74,3 +74,6 @@ local3.*     /var/log/RedLock.log
 1. https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-admin/configure-external-integrations-on-prisma-cloud/integrate-prisma-cloud-with-webhooks
 
 2. Insert Cloud Function trigger URL into the “Webhook URL” textbox
+
+#### Support
+See the [support policy](SUPPORT.md).
