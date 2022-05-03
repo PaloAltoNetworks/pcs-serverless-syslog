@@ -75,5 +75,5 @@ local3.*     /var/log/RedLock.log
 
 2. Insert Cloud Function trigger URL into the “Webhook URL” textbox
 
-#### Support
+### Support
 See the [support policy](SUPPORT.md).
