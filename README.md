@@ -1,7 +1,7 @@
 # Prisma Cloud Function to Syslog 
 
-Version: *1.0*
-Author: *Eddie Beuerlein and Marc Hobson*
+Version: *1.1*
+Author: *Eddie Beuerlein, Marc Hobson, Sean Sullivan*
 
 ### Use Cases
 - Can’t use AWS SQS integration because environment is Azure/GCP only
@@ -53,6 +53,26 @@ Author: *Eddie Beuerlein and Marc Hobson*
    - First click on the function
    - Select “Trigger” 
    - Copy the URL for use with the Prisma Cloud webhook integration.
+
+#### Azure Function Setup
+
+- Create a Function App
+     - Publish: Code
+     - Runtime stack: Python
+     - Version: 3.9
+![](./images/create_azure_function.png)
+
+- Go to created Function App, and go to "Functions"
+     - Create 
+     ![](./images/create_azure_function_function.png)
+     - Develop in Portal
+     - HTTP trigger
+          - Authorization level: Function
+     ![](./images/azure_function_trigger.png)
+     - Code + Test 
+          - Paste code here (overwrite all)
+          - Save
+     ![](./images/azure_function_code.png)
 
 #### VM machine / Syslog Server Setup
 
